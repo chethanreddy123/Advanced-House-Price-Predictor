@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import joblib
+import sklearn
 
 
 def main():

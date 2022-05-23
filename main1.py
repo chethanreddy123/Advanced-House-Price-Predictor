@@ -1,10 +1,5 @@
-import pandas as pd
-import numpy as np
 import streamlit as st
 import time
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 import joblib
 
 
@@ -14,7 +9,7 @@ def main():
     st.markdown(
         'Just Enter the following details and we will predict the price of your **Dream House**')
 
-        
+
     st.sidebar.title('Developer\'s Contact')
     st.sidebar.markdown('[![Chethan-Reddy]'
                         '(https://img.shields.io/badge/Author-Chethan%20Reddy-brightgreen)]'
@@ -35,7 +30,7 @@ def main():
                 time.sleep(2)
                 bhk, area, baths, balcony , areatype = int(bhk), int(
                     area), int(baths), int(balcony), int(areatype)
-                x_test = np.array([[areatype, bhk, area, baths, balcony]])
+                x_test = [[areatype, bhk, area, baths, balcony]]
                 prediction = model.predict(x_test)
                 st.info(f"Your **Dream House** Price is {prediction[0][0]} lacs :)")
         else:

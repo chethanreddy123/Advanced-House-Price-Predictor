@@ -5,6 +5,7 @@ import sklearn
 
 
 def main():
+
     model = joblib.load('model_joblib')
     st.title('House Price Prediction for Silicon Valley of India - Bangalore')
     st.markdown(
